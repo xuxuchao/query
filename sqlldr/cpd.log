@@ -1,0 +1,59 @@
+
+SQL*Loader: Release 12.2.0.1.0 - Production on 星期二 3月 7 14:17:18 2023
+
+Copyright (c) 1982, 2017, Oracle and/or its affiliates.  All rights reserved.
+
+控制文件:      E:\PycharmProjects\query\sqlldr\cpd.ctl
+为全部输入指定了字符集 UTF8。
+
+数据文件:      E:\PycharmProjects\query\sqlldr\cpd.csv
+  错误文件:    E:\PycharmProjects\query\sqlldr\cpd.bad
+  废弃文件:    未作指定
+ 
+(可废弃所有记录)
+
+要加载的数: ALL
+要跳过的数: 0
+允许的错误: 50
+绑定数组: 64 行, 最大 256000 字节
+继续:    未作指定
+所用路径:       常规
+
+表 UPL_DCS_CPD_DE,已加载从每个逻辑记录
+插入选项对此表 APPEND 生效
+TRAILING NULLCOLS 选项生效
+
+   列名                  位置   长度  中止 包装 数据类型
+------------------------------ ---------- ----- ---- ---- ---------------------
+TICKET_NO                           FIRST    20   ,  O (") CHARACTER            
+FIRST_NAME                           NEXT    41   ,  O (") CHARACTER            
+FULL_NAME                            NEXT    40   ,  O (") CHARACTER            
+FREQUENT_FLYER_NO_OF_PASSENGER       NEXT    40   ,  O (") CHARACTER            
+CREDENTIAL_NO                        NEXT    40   ,  O (") CHARACTER            
+PASSPORT_NO                          NEXT    20   ,  O (") CHARACTER            
+
+记录 202: 被拒绝 - 表 UPL_DCS_CPD_DE 的列 FULL_NAME 出现错误。
+数据文件的字段超出最大长度
+记录 302: 被拒绝 - 表 UPL_DCS_CPD_DE 的列 FULL_NAME 出现错误。
+数据文件的字段超出最大长度
+
+表 UPL_DCS_CPD_DE:
+  已成功载入 749 行。
+  由于数据错误, 2 行 没有加载。
+  由于所有 WHEN 子句失败, 0 行 没有加载。
+  由于所有字段都为空值, 0 行 没有加载。
+
+
+为绑定数组分配的空间:                 13696 字节 (64 行)
+读取   缓冲区字节数:10485760
+
+跳过的逻辑记录总数:          0
+读取的逻辑记录总数:           751
+拒绝的逻辑记录总数:          2
+废弃的逻辑记录总数:        0
+
+从 星期二 3月  07 14:17:18 2023 开始运行
+在 星期二 3月  07 14:17:19 2023 处运行结束
+
+经过时间为: 00: 00: 01.92
+CPU 时间为: 00: 00: 00.45
