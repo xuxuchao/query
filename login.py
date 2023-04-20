@@ -26,6 +26,8 @@ class login(object):
             self.pwd = "Abc@369369"
         elif hj == "OPRAMU":
             self.url = opra_mu
+            self.id = "upl"
+            self.pwd = "Abc@12345"
         elif hj == "OPRACZ":
             self.url = opra_cz
         elif hj == "PT":

@@ -115,8 +115,8 @@ def get_token(host, user_id, password):
 
 
 if __name__ == '__main__':
-    url = "/upl/uplTicketFimForwarding"
-    token = get_token("10.1.18.186", "upl", "Abc@123")
+    url = "/upl-file/test/encry?data=邹犀撃&type=NAME"
+    token = get_token("10.1.19.222", "upl", "Abc@12345")
     str_encrypt = {"url": url, "token": token, "timestamp": timestamp_to_str(time.time())}
     s = AESCipher(key=token[-16:]).encrypt(json.dumps(str_encrypt))
     print("===========Authorization", token)

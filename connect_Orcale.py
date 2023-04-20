@@ -52,11 +52,12 @@ def digits_number(num):
     return ''.join(random.sample(string.digits * 2, num))
 
 if __name__ == '__main__':
-    list_a =[
-        ["999","1","6707538231","1037653739596869632"],
-        ["999","1","4870341814","1037653739575832576"]
-    ]
+    # list_a =[
+    #     ["999","1","6707538231","1037653739596869632"],
+    #     ["999","1","4870341814","1037653739575832576"]
+    # ]
 
-    for a in list_a:
-        sql = f"update opraupl.upl_dcs_cpd set TICKET_NO='{a[2]}',COUPON_NO='{a[1]}',PREFIX='{a[0]}'   where SEQUENCE='{a[3]}'"
-        OracleConnect("OPRA_UPL_CA").sql_iud(sql)
+    for a in range(200):
+        sequence = random.randint(10000000000000,99900000000000)
+        sql = f"insert into upl_rev_discount (SEQUENCE, OFF_SEASON, OFF_SEASON_DISCOUNT, SHOULDER_SEASON, SHOULDER_SEASON_DISCOUNT, PEAK_SEASON, PEAK_SEASON_DISCOUNT, EFFECTIVE_DATE_FROM, EFFECTIVE_DATE_TO, CREATED_BY, CREATED_DATE, LAST_MODIFIED_BY, LAST_MODIFIED_DATE, RULE_CODE) values ('{sequence}', '1,7,8,9', 11, '2,5,11', 22, '3,4,6,10,12', 33, to_date('01-03-2023', 'dd-mm-yyyy'), to_date('31-03-2023', 'dd-mm-yyyy'), 'upl', to_date('29-03-2023 13:13:00', 'dd-mm-yyyy hh24:mi:ss'), 'upl', to_date('29-03-2023 17:28:21', 'dd-mm-yyyy hh24:mi:ss'), 'UYI')"
+        OracleConnect("OPRA_UPL_TEST").sql_iud(sql)

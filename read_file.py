@@ -46,7 +46,7 @@ class DoExcel:
         # 对xlsx文件操作之前,要 active.
         wa = wb.active
         # append() 一个参数,列表,写入的一行.
-        wa.append([value[1], value[9], value[5],value[15],value[16],value[18],value[20],value[2]])
+        wa.append([value[1],value[2],round(float(value[4]), 2),value[16],value[18],value[21],round(float(value[5]), 2)])
         # save() 一个参数,保存路径
         wb.save(self.filename)
         wb.close()
@@ -55,5 +55,5 @@ class DoExcel:
 
 if __name__ == '__main__':
     # DoExcel('result.xlsx').write_sheet_data(2)
-    a =ReadCsv('E:\\result\\2022-05-28_154337\_stats.csv').read_csv()
-    print(a)
+    value =ReadCsv('E:\PycharmProjects\Performance\\result\\2023-04-13_151342\_stats.csv').read_csv()[0]
+    print(value)
